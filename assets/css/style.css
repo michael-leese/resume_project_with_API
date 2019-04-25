@@ -355,6 +355,11 @@ footer .cv-pdf i:hover {
     margin-bottom: 30px;
 }
 
+/*--------------------------------------------Github*/
+.avatar{
+    border-radius: 5px;
+}
+
 /*--------------------------------------------Contact*/
 
 .contact-heading {

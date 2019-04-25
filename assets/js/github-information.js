@@ -8,7 +8,7 @@ function userInformationHTMl(user){
     <div class="gh-content">
         <div class="gh-avatar">
             <a href="${user.html_url}" target="_blank">
-                <img src="${user.avatar_url}" width="80" height="80" alt="${user.login}"/>
+                <img class="avatar" src="${user.avatar_url}" width="80" height="80" alt="${user.login}"/>
             </a>
         </div>
         <p>Followers: ${user.followers} - Following: ${user.following} <br> Repos: ${user.public_repos}</p>
@@ -37,6 +37,9 @@ function repoInformationHTML(repos){
 }
 
 function fetchGitHubInformation(event){
+    $("#gh-user-data").html("");
+    $("#gh-repo-data").html("");
+    
     var username = $("#gh-username").val();
     if (!username){
         $("#gh-user-data").html(`<h2>Please Enter a Github Username</h2>`);
@@ -67,3 +70,5 @@ function fetchGitHubInformation(event){
             }
         });
 }
+
+$(document).ready(fetchGitHubInformation);
